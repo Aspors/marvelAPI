@@ -1,0 +1,27 @@
+@import "../../../variables.scss";
+
+.banner {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  height: 100px;
+  background: $main-color;
+  .avengers {
+    position: absolute;
+    left: 45px;
+  }
+  p {
+    margin-left: 280px;
+    transform: translateY(18px);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: $third-color;
+  }
+  .avengers_logo {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

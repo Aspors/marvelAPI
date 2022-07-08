@@ -1,0 +1,108 @@
+@import "../../../variables.scss";
+
+aside {
+  height: 100%;
+  width: 425px;
+  position: sticky;
+  top: 15vh;
+  .character-info_bio {
+    box-sizing: border-box;
+    min-height: 294px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    .alert {
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 33px;
+    }
+
+    //dummy
+    .dummy {
+      .circle {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: $bio-dummy-color;
+      }
+      .line {
+        display: inline-block;
+        width: 326px;
+        height: 16px;
+        background-color: $bio-dummy-color;
+        margin-bottom: 3%;
+        margin-left: 8px;
+      }
+      .bold-line {
+        display: block;
+        width: 375px;
+        height: 35px;
+        margin-top: 15px;
+        background-color: $bio-dummy-color;
+      }
+    }
+
+    //bio-of-char
+    .thumbnail__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      img {
+        width: 150px;
+        height: 150px;
+      }
+      .name__wrapper {
+        padding-top: 6px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .name {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 26px;
+          display: block;
+        }
+        .buttons {
+          .button {
+            display: block;
+            &.button_grey {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .bio {
+      margin-top: 15px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .comics {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .item-wrapper {
+      .comics__item {
+        padding: 4px 0 0 10px;
+        text-decoration: none;
+        color: $main-color;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        display: block;
+        width: 100%;
+        min-height: 25px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
