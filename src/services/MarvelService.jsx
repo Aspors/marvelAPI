@@ -17,9 +17,35 @@ const useMarvelService = () => {
     return formed;
   };
 
+  const getComisc = async (offset = 0) => {
+    const res = await request(
+      `${_apiBase}comics?limit=8&offset=${offset}&${_apiKey}`
+    );
+    const arrayComics = res.data.results.map((item) => {
+      return _transformComics(item);
+    });
+    return arrayComics;
+  };
+
   const getCharacterById = async (id, descrLimit = true) => {
     const res = await request(`${_apiBase}characters/${id}?${_apiKey}`);
     return _transformData(res.data.results[0], descrLimit);
+  };
+
+  const _transformComics = (comics) => {
+    const thumbnailValidation = () => {
+      const thumbnailPath =
+        comics.thumbnail.path + "." + comics.thumbnail.extension;
+      return comics.thumbnail.path.indexOf("image_not_available") === -1
+        ? thumbnailPath
+        : `${process.env.PUBLIC_URL}/icons/comicsNotfound.jpg`;
+    };
+
+    return {
+      thumbnail: thumbnailValidation(),
+      title: comics.title,
+      price: comics.prices[0].price ? comics.prices[0].price : "NOT AVAILABLE",
+    };
   };
 
   const _transformData = (char, descrLimit) => {
@@ -49,7 +75,14 @@ const useMarvelService = () => {
     };
   };
 
-  return { loading, error, getAllCharacters, getCharacterById, clearError };
+  return {
+    loading,
+    error,
+    getAllCharacters,
+    getCharacterById,
+    clearError,
+    getComisc,
+  };
 };
 
 export default useMarvelService;

@@ -1,0 +1,32 @@
+@import "../../../variables.scss";
+
+.comics {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 50px;
+  .comics__item {
+    width: 225px;
+    height: 415px;
+    margin-bottom: 55px;
+    .cover {
+      width: 225px;
+      height: fit-content;
+      margin-bottom: 10px;
+    }
+    .title {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $price;
+    }
+  }
+}
