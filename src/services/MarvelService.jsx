@@ -4,7 +4,7 @@ const useMarvelService = () => {
   const { loading, request, error, clearError } = useHttp();
 
   const _apiBase = "https://gateway.marvel.com:443/v1/public/";
-  const _apiKey = "apikey=ef90cd35acc016275752088bbf8e2496";
+  const _apiKey = ;
   const _deafultOffset = 0;
 
   const getAllCharacters = async (offset = _deafultOffset) => {
@@ -44,7 +44,10 @@ const useMarvelService = () => {
     return {
       thumbnail: thumbnailValidation(),
       title: comics.title,
-      price: comics.prices[0].price ? comics.prices[0].price : "NOT AVAILABLE",
+      price: comics.prices[0].price
+        ? comics.prices[0].price + "$"
+        : "NOT AVAILABLE",
+      url: comics.urls[0].url,
     };
   };
 

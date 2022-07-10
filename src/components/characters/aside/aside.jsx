@@ -45,7 +45,7 @@ const Aside = (props) => {
     const renderComics = char.comics.map(({ name, resourceURI }, key) => {
       if (key > 10) return null;
       return (
-        <a key={key} href={resourceURI} className="comics__item">
+        <a key={key} href={resourceURI} className="comicsList__item">
           {name}
         </a>
       );
@@ -77,7 +77,7 @@ const Aside = (props) => {
           </div>
         </div>
         <p className="bio">{char.description}</p>
-        <span className="comics">Comics:</span>
+        <span className="comicsList">Comics:</span>
         <div className="item-wrapper">{comics}</div>
       </>
     );

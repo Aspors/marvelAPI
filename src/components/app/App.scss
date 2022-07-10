@@ -29,7 +29,12 @@
     background-repeat: no-repeat;
   }
   &.button_load {
+    display: block;
     width: 170px;
     height: 38px;
+    margin: 0 auto;
+    &:disabled {
+      filter: grayscale(90%);
+    }
   }
 }

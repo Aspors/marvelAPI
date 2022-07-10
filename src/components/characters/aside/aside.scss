@@ -81,7 +81,7 @@ aside {
       font-size: 14px;
       line-height: 16px;
     }
-    .comics {
+    .comicsList {
       display: block;
       margin-top: 10px;
       margin-bottom: 10px;
@@ -90,7 +90,7 @@ aside {
       line-height: 21px;
     }
     .item-wrapper {
-      .comics__item {
+      .comicsList__item {
         padding: 4px 0 0 10px;
         text-decoration: none;
         color: $main-color;
