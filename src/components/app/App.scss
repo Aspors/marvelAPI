@@ -17,6 +17,10 @@
     linear-gradient(135deg, transparent 8px, $second-color 0) top left;
   background-size: 51% 100%;
   background-repeat: no-repeat;
+  transition: transform 0.25s;
+  &:hover {
+    transform: translateY(-6px);
+  }
   .btn-inner {
     text-align: center;
     padding-top: 10%;

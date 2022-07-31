@@ -12,11 +12,12 @@ const Aside = (props) => {
 
   const onCharLoaded = (char) => {
     setChar(char);
+    return char;
   };
 
   const updChar = () => {
     clearError();
-    getCharacterById(props.id, false).then(onCharLoaded);
+    getCharacterById(props.id, false, "comicList").then(onCharLoaded);
   };
 
   useEffect(() => {
@@ -42,10 +43,10 @@ const Aside = (props) => {
   };
 
   const CharInfo = () => {
-    const renderComics = char.comics.map(({ name, resourceURI }, key) => {
+    const renderComics = char.comics.map(({ name, id }, key) => {
       if (key > 10) return null;
       return (
-        <a key={key} href={resourceURI} className="comicsList__item">
+        <a href={`comics/${id}`} key={key} className="comicsList__item">
           {name}
         </a>
       );
@@ -97,6 +98,7 @@ const Aside = (props) => {
           {dummy}
           {content}
         </div>
+        {props.children}
       </aside>
     </>
   );

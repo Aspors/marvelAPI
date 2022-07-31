@@ -1,0 +1,21 @@
+.char-page {
+  margin-top: 30px;
+  height: 1px;
+  min-height: 484px;
+  &__img {
+    max-width: 293px;
+    max-height: 293px;
+    float: left;
+    margin-right: 50px;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  &__descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}

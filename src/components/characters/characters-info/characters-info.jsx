@@ -5,6 +5,7 @@ import useMarvelService from "../../../services/MarvelService.jsx";
 import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../error-message/ErrorMessage";
 import ErrorBoundary from "../../error-boundary/ErrorBoundary";
+import SearchForm from "../search-form/SearchForm";
 
 const CharactersInfo = () => {
   const [chars, setChars] = useState([]);
@@ -94,7 +95,9 @@ const CharactersInfo = () => {
         </button>
       </div>
       <ErrorBoundary>
-        <Aside id={id} />
+        <Aside id={id}>
+          <SearchForm />
+        </Aside>
       </ErrorBoundary>
     </div>
   );

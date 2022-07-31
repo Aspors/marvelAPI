@@ -12,7 +12,7 @@ function Header() {
           <div className="header__links">
             <NavLink
               className={({ isActive }) => (isActive ? "active_link" : "")}
-              to="/">
+              to="">
               Characters
             </NavLink>
             <span>/</span>
